@@ -1,0 +1,287 @@
+.boxshadow-checkbox-wrapper-7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e9ec;
+}
+
+.boxshadow-checkbox-wrapper-7 .title {
+    font-size: 15px;
+    color: #888;
+}
+
+.boxshadow-checkbox-wrapper-7 input {
+    visibility: hidden;
+    display: none;
+}
+
+.boxshadow-checkbox-wrapper-7 input,
+.boxshadow-checkbox-wrapper-7 input:after,
+.boxshadow-checkbox-wrapper-7 input:before,
+.boxshadow-checkbox-wrapper-7 input *,
+.boxshadow-checkbox-wrapper-7 input *:after,
+.boxshadow-checkbox-wrapper-7 input *:before,
+.boxshadow-checkbox-wrapper-7 input + label {
+    box-sizing: border-box;
+}
+
+.boxshadow-checkbox-wrapper-7 input::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input:after::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input:before::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input *::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input *:after::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input *:before::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input + label::-moz-selection,
+.boxshadow-checkbox-wrapper-7 input::selection,
+.boxshadow-checkbox-wrapper-7 input:after::selection,
+.boxshadow-checkbox-wrapper-7 input:before::selection,
+.boxshadow-checkbox-wrapper-7 input *::selection,
+.boxshadow-checkbox-wrapper-7 input *:after::selection,
+.boxshadow-checkbox-wrapper-7 input *:before::selection,
+.boxshadow-checkbox-wrapper-7 input + label::selection {
+    background: none;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label {
+    outline: 0;
+    display: block;
+    width: 4.5em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:after,
+.boxshadow-checkbox-wrapper-7 input + label:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:after {
+    left: 0;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:before {
+    display: none;
+}
+
+.boxshadow-checkbox-wrapper-7 input:checked + label:after {
+    left: 50%;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label {
+    background: #fbfbfb;
+    border-radius: 2em;
+    padding: 2px;
+    transition: all 0.4s ease;
+    border: 1px solid #e8eae9;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.5s ease, margin 0.5s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:hover:after {
+    will-change: padding;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:active {
+    box-shadow: inset 0 0 0 2em #e8eae9;
+}
+
+.boxshadow-checkbox-wrapper-7 input + label:active:after {
+    padding-right: 0.8em;
+}
+
+.boxshadow-checkbox-wrapper-7 input:checked + label {
+    background: #86d993;
+}
+
+.boxshadow-checkbox-wrapper-7 input:checked + label:active {
+    box-shadow: none;
+}
+
+.boxshadow-checkbox-wrapper-7 input:checked + label:active:after {
+    margin-left: -0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.boxshadow-checkbox-wrapper-55 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxshadow-checkbox-wrapper-55 .title {
+    font-size: 15px;
+    color: #888;
+}
+
+.boxshadow-checkbox-wrapper-55 .checkbox {
+
+}
+
+.boxshadow-checkbox-wrapper-55 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.boxshadow-checkbox-wrapper-55 *,
+.boxshadow-checkbox-wrapper-55::after,
+.boxshadow-checkbox-wrapper-55::before {
+    box-sizing: border-box;
+}
+
+.boxshadow-checkbox-wrapper-55 label {
+    display: inline-block;
+    position: relative;
+    /*
+    SIZE OF SWITCH
+    ==============
+    All sizes are in em - therefore
+    changing the font-size here
+    will change the size of the switch.
+    See .rocker-small below as example.
+    */
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #888;
+    min-width: 7em;
+    min-height: 4em;
+    overflow: hidden;
+    border-bottom: 0.5em solid #eee;
+}
+
+.boxshadow-checkbox-wrapper-55 label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.5em;
+    bottom: 0;
+    background-color: #999;
+    border: 0.5em solid #eee;
+    border-bottom: 0;
+}
+
+.boxshadow-checkbox-wrapper-55 .switch-left,
+.boxshadow-checkbox-wrapper-55 .switch-right {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75em;
+    height: 2.4em;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.boxshadow-checkbox-wrapper-55 .switch-left {
+    background-color: #bd5757;
+    color: #fff;
+    left: 0.5em;
+    bottom: 0px;
+    width: 3em;
+    height: 2.5em;
+    transform: rotate(0deg) skewX(0deg);
+}
+
+.boxshadow-checkbox-wrapper-55 .switch-right {
+    background-color: #ddd;
+    color: #888;
+    right: 0.8em;
+    bottom: 0.4em;
+    transform: rotate(-15deg) skewX(-15deg);
+}
+
+.boxshadow-checkbox-wrapper-55 .switch-left::before,
+.boxshadow-checkbox-wrapper-55 .switch-right::before {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 2.45em;
+    bottom: -0.45em;
+    background-color: #ccc;
+    transform: skewY(-65deg);
+}
+
+.boxshadow-checkbox-wrapper-55 .switch-left::before {
+    left: -0.4em;
+    background-color: transparent;
+}
+
+.boxshadow-checkbox-wrapper-55 .switch-right::before {
+    right: -0.375em;
+    transform: skewY(65deg);
+}
+
+.boxshadow-checkbox-wrapper-55 input:checked + .switch-left {
+    width: 2.75em;
+    height: 2.4em;
+    left: 0.85em;
+    bottom: 0.4em;
+    background-color: #ddd;
+    color: #888;
+    transform: rotate(15deg) skewX(15deg);
+}
+
+.boxshadow-checkbox-wrapper-55 input:checked + .switch-left::before {
+    background-color: #ccc;
+}
+
+.boxshadow-checkbox-wrapper-55 input:checked + .switch-left + .switch-right {
+    width: 3em;
+    height: 2.5em;
+    right: 0.5em;
+    bottom: 0;
+    background-color: #0084d0;
+    color: #fff;
+    transform: rotate(0deg) skewX(0deg);
+}
+
+.boxshadow-checkbox-wrapper-55 input:checked + .switch-left + .switch-right::before {
+    right: -0.375em;
+    background-color: transparent;
+    transform: skewY(65deg);
+}
+
+  /* Keyboard Users */
+.boxshadow-checkbox-wrapper-55 input:focus + .switch-left {
+    color: #fff;
+}
+
+.boxshadow-checkbox-wrapper-55 input:checked:focus + .switch-left {
+    color: #333;
+}
+
+.boxshadow-checkbox-wrapper-55 input:focus + .switch-left + .switch-right {
+    color: #333;
+}
+
+.boxshadow-checkbox-wrapper-55 input:checked:focus + .switch-left + .switch-right {
+    color: #fff;
+}
