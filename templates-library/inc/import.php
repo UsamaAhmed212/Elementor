@@ -59,8 +59,7 @@ class elementor_Import_templates_library  extends Source_Base {
         $remote = esc_url($_POST['parent_site']);
         $end_point = \Magcial_Addon_Cloud_Library::$plugin_data["mgaddon_import_data"];
         //	$data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' . $id)), true);
-        $data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' .
-        $id, ['timeout' => 120])), true);
+        $data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' . $id, ['timeout' => 120])), true);
         $content = $data['content'];
         $content = $this->process_export_import_content($content, 'on_import');
         $content = $this->replace_elements_ids($content);
