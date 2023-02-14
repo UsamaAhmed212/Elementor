@@ -5,7 +5,7 @@ namespace Elementor\TemplateLibrary;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class Magcial_Addon_Import_Library_Spike  extends Source_Base {
+class elementor_Import_templates_library  extends Source_Base {
 
     public function __construct() {
         add_action('wp_ajax_magical_addon_import_template', array($this, 'xl_tab_import_data'));
@@ -68,4 +68,4 @@ class Magcial_Addon_Import_Library_Spike  extends Source_Base {
     
 }
 
-new Magcial_Addon_Import_Library_Spike();
+new elementor_Import_templates_library();

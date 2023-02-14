@@ -125,8 +125,8 @@ class ElementorInitialization {
 	 */
 	public function elementor_templates_library() {
 	
-		// Elementor Templates Library Enqueue
-		require_once( ELEMENTOR_TEMPLATES_LIBRARY_DIR . '/templates-library/templates-library.php' );
+		// Elementor Templates Library Class
+		require __DIR__ . '/templates-library/templates-library.php';
 		
 	}
 

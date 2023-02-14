@@ -38,9 +38,9 @@ class elementor_templates_library {
 
 		add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'elementor_editor_scripts' ) );
 
+		$this->elementor_Import_templates_library();
+
         add_action('wp_ajax_process_ajax', array($this, 'ajax_data'));
-        
-		// $this->include_files();
         
 		add_action( 'elementor/editor/after_enqueue_styles', array( $this, 'editor_widget_styles' ) );
 		add_action( 'elementor/preview/enqueue_styles', array( $this, 'editor_preview_widget_styles' ) );
@@ -82,9 +82,9 @@ class elementor_templates_library {
 
     }
     
-    public function include_files() {
+    public function elementor_Import_templates_library() {
 
-		// require ELEMENTOR_TEMPLATES_LIBRARY_DIR_URI . '/templates-library/inc/import.php';
+		// Elementor Import Templates Library Class
 	    require __DIR__ . '/inc/import.php';
 
 	}
