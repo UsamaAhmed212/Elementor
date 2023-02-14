@@ -8,7 +8,9 @@ defined( 'ABSPATH' ) || exit;
 class elementor_Import_templates_library  extends Source_Base {
 
     public function __construct() {
+
         add_action('wp_ajax_magical_addon_import_template', array($this, 'xl_tab_import_data'));
+    
     }
 
     public function get_id() {
@@ -58,12 +60,13 @@ class elementor_Import_templates_library  extends Source_Base {
         $end_point = \Magcial_Addon_Cloud_Library::$plugin_data["mgaddon_import_data"];
         //	$data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' . $id)), true);
         $data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' .
-            $id, ['timeout' => 120])), true);
+        $id, ['timeout' => 120])), true);
         $content = $data['content'];
         $content = $this->process_export_import_content($content, 'on_import');
         $content = $this->replace_elements_ids($content);
         echo json_encode($content);
         wp_die();
+
     }
     
 }
