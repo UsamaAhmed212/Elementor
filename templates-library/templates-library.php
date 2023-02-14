@@ -16,8 +16,9 @@ class elementor_templates_library {
     static $plugin_data = null;
 
 	public static function init() {
-		if ( !self::$instance )
-			self::$instance = new self;
+        if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
 		return self::$instance;
 	}
     
