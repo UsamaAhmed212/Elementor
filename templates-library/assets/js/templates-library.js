@@ -72,7 +72,7 @@
                     type: 'POST',
                     url: ajaxurl, 
                     data: {
-                      action: 'magical_addon_import_template',
+                      action: 'templates_library_import_template',
                       id: tmpl_id,
                       parent_site: parent_site,
                     },

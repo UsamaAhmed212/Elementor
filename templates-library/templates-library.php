@@ -34,7 +34,6 @@ class elementor_templates_library {
         );
         
 		add_action( 'elementor/editor/before_enqueue_styles', array( $this, 'elementor_editor_styles' )  );
-		// add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'elementor_editor_styles' ) );
 
 		add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'elementor_editor_scripts' ) );
 
@@ -63,9 +62,6 @@ class elementor_templates_library {
     
 	// Elementor Editor Styles Enqueue
 	public function elementor_editor_styles() {
-       
-        // Masonry Enqueue
-        wp_enqueue_script('masonry');
 
 		// Templates Library Css Enqueue
         wp_register_style( CONCAT_PROJECT_NAME . 'templates-library', ELEMENTOR_TEMPLATES_LIBRARY_DIR_URI . '/templates-library/assets/css/templates-library.css', array(), '1.0.0', 'all' );
@@ -75,6 +71,9 @@ class elementor_templates_library {
 
 	// Elementor Editor Scripts Enqueue
     public function elementor_editor_scripts() {
+
+        // Masonry Enqueue
+        wp_enqueue_script('masonry');
 
 		// Templates Library Js Enqueue
         wp_register_script( 'boxshadow-templates-library', ELEMENTOR_TEMPLATES_LIBRARY_DIR_URI . '/templates-library/assets/js/templates-library.js', array(), '1.0.0', true );

@@ -9,7 +9,7 @@ class elementor_Import_templates_library  extends Source_Base {
 
     public function __construct() {
 
-        add_action('wp_ajax_magical_addon_import_template', array($this, 'xl_tab_import_data'));
+        add_action( 'wp_ajax_templates_library_import_template', array( $this, 'xl_tab_import_data' ) );
     
     }
 
@@ -57,7 +57,7 @@ class elementor_Import_templates_library  extends Source_Base {
 
         $id = esc_attr($_POST['id']);
         $remote = esc_url($_POST['parent_site']);
-        $end_point = \Magcial_Addon_Cloud_Library::$plugin_data["mgaddon_import_data"];
+        $end_point = \elementor_templates_library::$plugin_data["mgaddon_import_data"];
         //	$data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' . $id)), true);
         $data = json_decode(wp_remote_retrieve_body(wp_remote_get($remote . 'wp-json/mg/v1/' . $end_point . '/?id=' . $id, ['timeout' => 120])), true);
         $content = $data['content'];
