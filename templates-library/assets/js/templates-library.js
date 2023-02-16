@@ -14,38 +14,38 @@
         onPreviewLoaded: function () {
             
             var main_wrap = $('#elementor-preview-iframe').contents();
-            var wrapper_html = "<div style='display:none;' class='mg-lib-wrap'>"
-                                    +"<div class='lib-inner'>"
-                                        +"<div class='header'>"
-                                            +"<div class='lhead'>"
-                                                +"<h2 class='lib-logo'>Library</h2>"
-                                                +"<h2 class='back-to-home'>Back to template</h2>"
-                                            +"</div>"
-                                            +"<div class='centerhead'>"
-                                                +"<ul>"
-                                                   +"<li data-type='element' class='active'>Elements</li>"
-                                                   +"<li data-type='section'>Section</li>"
-                                                   + /*"<li data-type='header-footer'>Header footer</li>"
-                                                   +"<li data-type='theme-builder'>Theme builder</li>"
-                                                   +*/"<li data-type='page'>Page</li>"
-                                                +"<ul>"
-                                            +"</div>"                                            
-                                            +"<div class='rhead'>"
-                                                +"<i class='eicon-sync'></i>"
-                                                +"<i class='lib-close eicon-close'></i>"
-                                            +"</div>"                                            
-                                        +"</div>"
-                                        +"<div class='lib-inner'>"
-                                            +"<div class='search-input'>"
-                                                +"<input class='xl-search' type='text' placeholder='Type & hit enter'>"
-                                            +"</div>"
-                                            +"<div class='lib-content'>"
-                                            +"</div>"
-                                        +"</div>"
-                                    +"</div>"
-                                    +"<div data-type='element' class='xl-settings'></div>"
-                                +"</div>";
-
+            var wrapper_html = `<div style='display:none;' class='mg-lib-wrap'>
+                                    <div class='lib-inner'>
+                                        <div class='header'>
+                                            <div class='lhead'>
+                                                <h2 class='lib-logo'>Library</h2>
+                                                <h2 class='back-to-home'>Back to template</h2>
+                                            </div>
+                                            <div class='centerhead'>
+                                                <ul>
+                                                    <li data-type='element' class='active'>Elements</li>
+                                                    <li data-type='section'>Section</li>
+                                                    <li data-type='header-footer'>Header footer</li>
+                                                    <li data-type='theme-builder'>Theme builder</li>
+                                                    <li data-type='page'>Page</li>
+                                                <ul>
+                                            </div>                                            
+                                            <div class='rhead'>
+                                                <i class='eicon-sync'></i>
+                                                <i class='lib-close eicon-close'></i>
+                                            </div>                                            
+                                        </div>
+                                        <div class='lib-inner'>
+                                            <div class='search-input'>
+                                                <input class='xl-search' type='text' placeholder='Type & hit enter'>
+                                            </div>
+                                            <div class='lib-content'>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-type='element' class='xl-settings'></div>
+                                </div>`;
             
             main_wrap.find('.elementor-add-template-button').after("<div class='elementor-add-section-area-button magical-add-button mg-tmbtn' style='margin-left:10px;'><i class='eicon-frame-minimize'></i></div>");
 
@@ -89,26 +89,26 @@
                   });
             });
 
-            $(document).on('click', '.rhead .eicon-sync', function(e) {
-                $('.lib-content').addClass('loading');
-                $('.xl-search').val('');
-                $.ajax({
-                    type: 'POST',
-                    url: ajaxurl,
-                    data: {
-                      action: 'xl_tab_reload_template',
-                    },
-                    success: function(data, textStatus, XMLHttpRequest) {
-                        $('.xl-loader').hide();
-                        var ajax_data = {
-                            page : '1',
-                            category:'',
-                            type : 'element',
-                        };
-                        process_data(ajax_data);                        
-                    },
-                  });
-            });
+            // $(document).on('click', '.rhead .eicon-sync', function(e) {
+            //     $('.lib-content').addClass('loading');
+            //     $('.xl-search').val('');
+            //     $.ajax({
+            //         type: 'POST',
+            //         url: ajaxurl,
+            //         data: {
+            //           action: 'xl_tab_reload_template',
+            //         },
+            //         success: function(data, textStatus, XMLHttpRequest) {
+            //             $('.xl-loader').hide();
+            //             var ajax_data = {
+            //                 page : '1',
+            //                 category:'',
+            //                 type : 'element',
+            //             };
+            //             process_data(ajax_data);                        
+            //         },
+            //       });
+            // });
 
             $(document).on('click', '.lib-img-wrap', function(e) {
                 var live_link = $(this).data('preview');
