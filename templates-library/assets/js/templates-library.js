@@ -232,6 +232,6 @@
         },
     };
 
-    $(window).on('elementor:init', TEMPLATES_LIBRARY.init);
+    $(window).on('elementor/init', TEMPLATES_LIBRARY.init);
 
 }(jQuery));	
