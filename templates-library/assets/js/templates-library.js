@@ -25,8 +25,6 @@
                                                 <ul>
                                                     <li data-type='element' class='active'>Elements</li>
                                                     <li data-type='section'>Section</li>
-                                                    <li data-type='header-footer'>Header footer</li>
-                                                    <li data-type='theme-builder'>Theme builder</li>
                                                     <li data-type='page'>Page</li>
                                                 <ul>
                                             </div>                                            
@@ -86,10 +84,12 @@
                         console.log(exception);
                     }, 
 
-                  });
+                });
+
             });
 
             // $(document).on('click', '.rhead .eicon-sync', function(e) {
+
             //     $('.lib-content').addClass('loading');
             //     $('.xl-search').val('');
             //     $.ajax({
@@ -107,10 +107,12 @@
             //             };
             //             process_data(ajax_data);                        
             //         },
-            //       });
+            //     });
+
             // });
 
             $(document).on('click', '.lib-img-wrap', function(e) {
+
                 var live_link = $(this).data('preview');
                 var win = window.open( live_link, '_blank');
                 if (win) {
@@ -120,6 +122,7 @@
                     //Browser has blocked it
                     alert('Please allow popups for this website');
                 }
+
             });
 
             $(document).on('click', '.mg-preview .close', function(e) {
@@ -133,6 +136,7 @@
             });
 
             $(document).on('click', '.page-link', function(e) {
+
                 $('.lib-content').addClass('loading');
                 var page_no = $(this).data('page-number');
                 var category = $('#elementor-editor-wrapper').find('.xl-settings').attr('data-catsettings');
@@ -146,9 +150,11 @@
                     search : search,
                 };
                 process_data(ajax_data);
+
             });
 
             $(document).on('click', '.filter-wrap a', function(e) {
+
                 var category = $(this).data('cat');
                 $('#elementor-editor-wrapper').find('.xl-settings').attr('data-catsettings', category);
                 $('.lib-content').addClass('loading');
@@ -157,9 +163,11 @@
                     category:category,
                 };
                 process_data(ajax_data);
+
             });
 
             $(document).on('keypress', '.xl-search', function(e) {
+
                 if(e.which == 13) {
                     var search = $(this).val();
                     $('#elementor-editor-wrapper').find('.xl-settings').attr('data-search', search);
@@ -172,10 +180,12 @@
                     };
                     process_data(ajax_data);
                 }
+
             });
 
             // Top type filter
             $(document).on('click', '.centerhead li', function(e) {
+
                 var type = $(this).data('type');
                 $(this).addClass("active").siblings().removeClass("active");
                 $('#elementor-editor-wrapper').find('.xl-settings').attr('data-type', type);
@@ -188,9 +198,10 @@
                     type : type,
                 };
                 process_data(ajax_data);
+
             });
 
-            function process_data($data){
+            function process_data($data) {
 
                   $.ajax({
                     type: 'POST',
@@ -220,18 +231,21 @@
                     },
 
                   });
+
             }
 
-            $('#elementor-editor-wrapper').find('.lib-close').click(function(){
+            $('#elementor-editor-wrapper').find('.lib-close').click(function() {
+
                 $('#elementor-editor-wrapper').find('.mg-lib-wrap').hide();
                 $('.live-preview').html('');
                 $('.lib-content').show();
                 $('.back-to-home').hide();
+
             });
 
         },
     };
 
-    $(window).on('elementor/init', TEMPLATES_LIBRARY.init);
+    $(window).on( 'elementor/init', TEMPLATES_LIBRARY.init );
 
 }(jQuery));	
