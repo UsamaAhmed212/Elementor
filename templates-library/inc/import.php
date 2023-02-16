@@ -9,7 +9,7 @@ class elementor_Import_templates_library  extends Source_Base {
 
     public function __construct() {
 
-        add_action( 'wp_ajax_templates_library_import_template', array( $this, 'xl_tab_import_data' ) );
+        add_action( 'wp_ajax_templates_library_import_template', array( $this, 'templates_library_import_template_data' ) );
     
     }
 
@@ -53,7 +53,7 @@ class elementor_Import_templates_library  extends Source_Base {
 
     }
 
-    public function xl_tab_import_data() {
+    public function templates_library_import_template_data() {
 
         $id = esc_attr($_POST['id']);
         $remote = esc_url($_POST['parent_site']);

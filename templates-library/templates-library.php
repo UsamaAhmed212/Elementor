@@ -39,7 +39,7 @@ class elementor_templates_library {
 
 		$this->elementor_Import_templates_library();
 
-        add_action('wp_ajax_process_ajax', array($this, 'ajax_data'));
+        add_action('wp_ajax_templates_library_import_template_preview', array($this, 'wp_ajax_templates_library_import_template_preview_data'));
         
 		add_action( 'elementor/editor/after_enqueue_styles', array( $this, 'editor_widget_styles' ) );
 		add_action( 'elementor/preview/enqueue_styles', array( $this, 'editor_preview_widget_styles' ) );
@@ -104,7 +104,7 @@ class elementor_templates_library {
         return $out;
 	}
     
-    function ajax_data() {
+    function wp_ajax_templates_library_import_template_preview_data() {
         $direct_data = json_decode(wp_remote_retrieve_body(wp_remote_get(self::$plugin_data['remote_site'] . '/wp-json/mg/v1/' . self::$plugin_data['widget'] . '/')), true);
 
         $option_type = $this->choose_option_table($_POST['data']['type']);

@@ -196,7 +196,7 @@
                     type: 'POST',
                     url: ajaxurl,
                     data: {
-                      action: 'process_ajax',
+                      action: 'templates_library_import_template_preview',
                       data : $data,
                     },
 
