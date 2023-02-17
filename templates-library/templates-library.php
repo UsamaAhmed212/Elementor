@@ -84,7 +84,7 @@ class elementor_templates_library {
     public function elementor_Import_templates_library() {
 
 		// Elementor Import Templates Library Class
-	    require __DIR__ . '/inc/import.php';
+	    require_once( __DIR__ . '/inc/import.php' );
 
 	}
     
