@@ -76,8 +76,8 @@ class elementor_templates_library {
         wp_enqueue_script('masonry');
 
 		// Templates Library Js Enqueue
-        wp_register_script( 'boxshadow-templates-library', ELEMENTOR_TEMPLATES_LIBRARY_DIR_URI . '/templates-library/assets/js/templates-library.js', array(), '1.0.0', true );
-        wp_enqueue_script( 'boxshadow-templates-library' );
+        wp_register_script( CONCAT_PROJECT_NAME . 'templates-library', ELEMENTOR_TEMPLATES_LIBRARY_DIR_URI . '/templates-library/assets/js/templates-library.js', array(), '1.0.0', true );
+        wp_enqueue_script( CONCAT_PROJECT_NAME . 'templates-library' );
 
     }
     
