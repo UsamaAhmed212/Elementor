@@ -63,7 +63,7 @@
 
             $(document).on('click', '.insert-tmpl', function(e) {
 
-                var tmpl_id = $(this).data('id');
+                var template_id = $(this).data('id');
                 var parent_site = $(this).data('parentsite');
                 $('.lib-content').addClass('loading');
                 $.ajax({
@@ -71,11 +71,11 @@
                     url: ajaxurl, 
                     data: {
                       action: 'templates_library_import_template',
-                      id: tmpl_id,
+                      id: template_id,
                       parent_site: parent_site,
                     },
                     success: function(data, textStatus, XMLHttpRequest) {
-                        var xl_data = JSON.parse(data); 
+                        var xl_data = JSON.parse(data);
                         elementor.getPreviewView().addChildModel(xl_data, {silent: 0});
                         $('.lib-content').removeClass('loading');
                         $('#elementor-editor-wrapper').find('.mg-lib-wrap').hide();
